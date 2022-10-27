@@ -4,9 +4,14 @@ use std::io::Read;
 use serde_json::{Value};
 
 
+/// Contains the reported frequency of codons in a particular specicies
 struct CodonTable {
+    /// The species the codon table is developed for
     species: String,
+    /// Amino acid mapped to their respective codons and reported frequency in
+    /// the specfied species  
     codon_usage_table: HashMap<char, HashMap<String, f32>>,
+    /// Codon mapped to their respective 1 character amino acid translation
     translations_table: HashMap<String, char>
 }
 
@@ -61,6 +66,5 @@ impl CodonTable {
 
 
 fn main() {
-    
     println!("Hello, world!");
 }
