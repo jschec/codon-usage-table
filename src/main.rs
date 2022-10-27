@@ -10,11 +10,6 @@ struct CodonTable {
     translations_table: HashMap<String, char>
 }
 
-fn read_json(raw_json:&str) -> Value {
-    let parsed: Value = serde_json::from_str(raw_json).unwrap();
-    return parsed
-}
-
 
 impl CodonTable {
 
